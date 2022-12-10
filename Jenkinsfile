@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        image = docker.build("bs/dockerfile")
+        sh "docker image build --tag alexogdfx/server.js:1.0 ."
     }
     stage('Test Image') {
        sh "bash launch-test.sh"
