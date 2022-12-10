@@ -14,7 +14,7 @@ node {
         image = docker.build("bs/dockerfile")
     }
     stage('Test Image') {
-        bash launch-test.sh
+       sh "bash launch-test.sh"
     }
 }
 
