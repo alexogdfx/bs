@@ -13,4 +13,5 @@ node {
 
         image = docker.build("bs/dockerfile")
     }
+}
 
