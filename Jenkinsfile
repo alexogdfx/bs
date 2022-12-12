@@ -19,7 +19,7 @@ node {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-           image.run('alexogdfx/server.js'){
+           sh 'docker container run --detach --publish 80:80 --name server.js alexogdfx/server.js:1.0'
            sh 'docker container ls'
            }
            
