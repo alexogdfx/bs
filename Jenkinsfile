@@ -26,6 +26,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
+       }
    
     stage('Test Image') {
        sh "bash launch-test.sh"
