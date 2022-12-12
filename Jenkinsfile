@@ -19,7 +19,7 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         image.inside {
-            sh 'echo "Tests passed"'
+            sh './launch-test.sh'
         }
     }
 
