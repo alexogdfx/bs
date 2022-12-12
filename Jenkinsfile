@@ -30,4 +30,12 @@ node {
             image.push("latest")
         }
     }
+          stage('Stop and remove container') {
+         
+        
+       sh "docker container stop server.js"
+       sh "docker container rm server.js"
+
+    }
+    
 }
