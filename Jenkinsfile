@@ -20,7 +20,7 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
     
-           sh "docker container top server.js" 
+           sh 'docker container top server.js'
         
     }
 
