@@ -19,9 +19,9 @@ node {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-    
+        docker.image("alexogdfx/server.js").withRun{ 
            sh 'bash launch-test.sh'
-        
+        }
     }
 
     stage('Push image') {
