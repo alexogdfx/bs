@@ -20,7 +20,7 @@ node {
 
             
             sh 'bash launch-test.sh'
-        }
+       
     }
 
     stage('Push image') {
