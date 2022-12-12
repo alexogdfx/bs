@@ -17,6 +17,8 @@ node {
 
     stage('Test Image') {
        sh "bash launch-test.sh"
+       sh "docker container stop server.js"
+
     }
     
         stage('Push image') {
