@@ -11,17 +11,18 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        image = docker.build("alexogdfx/server.js")
-     
+        image = docker.build('alexogdfx/server.js')
+      
     }
 
        stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        image.inside {
-            sh 'echo "Tests passed"'
-        }
+           image.run('alexogdfx/server.js'){
+           sh 'bash launch-test.sh'
+           }
+           
     }
 
     stage('Push image') {
