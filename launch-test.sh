@@ -2,6 +2,5 @@
 
 #testing that container is running
 
-docker container ls
-
+docker container top server.js
 
