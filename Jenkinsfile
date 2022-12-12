@@ -21,7 +21,7 @@ node {
 
         
             sh 'docker container top server.js'
-        }
+        
     }
 
     stage('Push image') {
