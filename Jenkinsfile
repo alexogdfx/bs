@@ -21,5 +21,13 @@ node {
     stage('Test Image') {
        sh "bash launch-test.sh"
     }
+    
+      stage('Stop and remove container') {
+         
+        
+       sh "docker container stop server.js"
+       sh "docker container rm server.js"
+
+    }
 }
 
