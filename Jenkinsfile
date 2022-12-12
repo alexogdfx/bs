@@ -17,9 +17,6 @@ node {
 
     stage('Test Image') {
        sh "bash launch-test.sh"
-       sh "docker container stop server.js"
-       sh "docker container rm server.js"
- 
 
     }
     
@@ -29,7 +26,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            app.push("${env.BUILD_NUMBER}")
+            image.push("${env.BUILD_NUMBER}")
         }
        }
     
