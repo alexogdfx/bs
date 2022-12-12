@@ -19,7 +19,7 @@ node {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        image.inside{
+        
             sh 'docker container top server.js'
         }
     }
