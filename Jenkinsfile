@@ -19,7 +19,7 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         image.inside {
-            sh './launch-test.sh'
+            sh 'bash launch-test.sh'
         }
     }
 
