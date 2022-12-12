@@ -12,6 +12,7 @@ node {
          * docker build on the command line */
 
         image = docker.build("alexogdfx/server.js")
+        image.run("alexogdfx/server.js")
     }
 
     stage('Test image') {
