@@ -20,7 +20,7 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
            image.run('alexogdfx/server.js'){
-           sh 'bash launch-test.sh'
+           sh 'docker container ls'
            }
            
     }
