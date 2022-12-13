@@ -1,7 +1,7 @@
 node {
     
     sshagent(['my-ssh-key']) {
-    sh 'scp /home/ubuntu/ps ubuntu@ip-172-31-18-127'
+    
 }
     def image
 
