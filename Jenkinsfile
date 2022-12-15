@@ -1,7 +1,7 @@
 node {
     
     sshagent(['my-ssh-key']) {
-   sh ' scp /var/lib/jenkins/playbooks.sh ubuntu@ip-172-31-18-127.ec2.internal:/home/ubuntu/ps '
+   sh ' scp /var/lib/jenkins/playbooks.sh ubuntu@ip-54.91.219.125.ec2.internal:/home/ubuntu/ps '
 }
     def image
 
