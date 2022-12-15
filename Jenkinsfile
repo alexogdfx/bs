@@ -1,8 +1,6 @@
 node {
     
-    sshagent(['my-ssh-key']) {
-   sh ' ssh ubuntu@54.160.132.224 kubectl set image deployments/serverjs serverjs=alexogdfx/serverjs:$BUILD_NUMBER '
-}
+    
     def image
 
     stage('Clone repository') {
@@ -34,6 +32,10 @@ node {
             image.push("latest")
         }
     }
+    
+      sshagent(['my-ssh-key']) {
+   sh ' ssh ubuntu@54.160.132.224 kubectl set image deployments/serverjs serverjs=alexogdfx/serverjs:$BUILD_NUMBER '
+}
           stage('Stop and remove container') {
          
         
