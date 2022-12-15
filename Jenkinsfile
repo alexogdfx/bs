@@ -1,7 +1,7 @@
 node {
     
     sshagent(['my-ssh-key']) {
-   sh ' ssh ubuntu@54.91.219.125 kubectl set image deployments/serverjs serverjs=alexogdfx/serverjs:$BUILD_NUMBER'
+   sh ' ssh ubuntu@54.160.132.224 echo "hello world" '
 }
     def image
 
