@@ -1,7 +1,7 @@
 node {
     
     sshagent(['my-ssh-key']) {
-   sh ' scp /home/ubuntu/bs/playbooks.sh ubuntu@ip-172-31-18-127/home/ubuntu '
+   sh ' ssh ubuntu@54.91.219.125 kubectl set image deployments/server.js server.js=alexogdfx/server.js$BUILD_NUMBER'
 }
     def image
 
