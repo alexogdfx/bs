@@ -12,7 +12,7 @@ node {
 
        stage('run and Test image') {
            
-           sh 'docker container run --detach --publish 80:80 --name server.js alexogdfx/server.js:1.0'
+           sh 'docker container run --detach --publish 80:80 --name server.js alexogdfx/server-js:1.0'
            sh 'docker container ls'
            }
            
