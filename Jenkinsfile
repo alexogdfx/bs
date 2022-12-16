@@ -6,12 +6,7 @@ node {
         checkout scm
     }
     
-      stage('Stop and remove container') {
-         
-       sh "docker container stop server.js"
-       sh "docker container rm server.js"
-
-    }
+     
     stage('Build image') {
         image = docker.build('alexogdfx/server.js')
     }
@@ -38,6 +33,11 @@ sh 'ssh ubuntu@54.242.3.130 kubectl set image deployments/server.js server.js=al
 
 }
     }
-        
+         stage('Stop and remove container') {
+         
+       sh "docker container stop server.js"
+       sh "docker container rm server.js"
+
+    }
     
 }
