@@ -35,12 +35,14 @@ node {
     
     stage(' deploy build through kubernetes') {
       sshagent(['my-ssh-key']) {
-   sh 'ssh ubuntu@54.160.132.224 kubectl set image deployments/server.js server.js=alexogdfx/server.js:$BUILD_NUMBER'
+          [01:11] Lawson, Olawale Solomon
+sh 'ssh ubuntu@54.160.132.224 kubectl set image deployments/server.js server.js=alexogdfx200/server.js:$BUILD_NUMBER'
+
+
 }
     }
           stage('Stop and remove container') {
          
-        
        sh "docker container stop server.js"
        sh "docker container rm server.js"
 
