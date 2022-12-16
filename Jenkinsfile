@@ -15,6 +15,8 @@ node {
            
            sh 'docker container run --detach --publish 80:80 --name server-js alexogdfx/server.js:1.0'
            sh 'docker container ls'
+             sh "docker container stop server-js"
+       sh "docker container rm server-js"
            }
            
     stage('Push image') {
@@ -35,8 +37,6 @@ sh 'ssh ubuntu@54.242.3.130 kubectl set image deployments/server-js server-js=al
     }
          stage('Stop and remove container') {
          
-       sh "docker container stop server-js"
-       sh "docker container rm server-js"
 
     }
     
