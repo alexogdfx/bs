@@ -35,7 +35,7 @@ node {
     
     stage(' deploy build through kubernetes') {
       sshagent(['my-ssh-key']) {
-          [01:11] Lawson, Olawale Solomon
+        
 sh 'ssh ubuntu@54.160.132.224 kubectl set image deployments/server.js server.js=alexogdfx200/server.js:$BUILD_NUMBER'
 
 
