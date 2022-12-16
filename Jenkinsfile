@@ -35,8 +35,8 @@ sh 'ssh ubuntu@54.242.3.130 kubectl set image deployments/server-js server-js=al
     }
          stage('Stop and remove container') {
          
-       sh "docker container stop server.js"
-       sh "docker container rm server.js"
+       sh "docker container stop server-js"
+       sh "docker container rm server-js"
 
     }
     
