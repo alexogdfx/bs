@@ -12,7 +12,7 @@ node {
 
        stage('run and Test image') {
            
-           sh 'docker container run --detach --publish 80:80 --name server-js alexogdfx/server.js:1.0'
+           sh 'docker container run --detach --publish 80:80 --name server.js alexogdfx/server.js:1.0'
            sh 'docker container ls'
            }
            
@@ -27,7 +27,7 @@ node {
     stage(' deploy build through kubernetes') {
       sshagent(['my-ssh-key']) {
         
-sh 'ssh ubuntu@54.242.3.130 kubectl set image deployments/server-js server.js=alexogdfx/server.js:$BUILD_NUMBER'
+sh 'ssh ubuntu@54.242.3.130 kubectl set image deployments/server.js server.js=alexogdfx/server.js:$BUILD_NUMBER'
 
 
 }
