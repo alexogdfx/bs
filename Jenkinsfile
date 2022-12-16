@@ -36,7 +36,7 @@ node {
     stage(' deploy build through kubernetes') {
       sshagent(['my-ssh-key']) {
         
-sh 'ssh ubuntu@54.160.132.224 kubectl set image deployments/server.js server.js=alexogdfx200/server.js:$BUILD_NUMBER'
+sh 'ssh ubuntu@54.160.132.224 kubectl set image deployments/server.js server.js=alexogdfx/server.js:$BUILD_NUMBER'
 
 
 }
